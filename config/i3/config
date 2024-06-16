@@ -48,6 +48,9 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
+# change language keyboard layout
+exec_always "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:alt_shift_toggle"
+
 # start a terminal
 bindsym $mod+Return exec --no-startup-id kitty
 
@@ -204,4 +207,4 @@ default_border none
 default_floating_border none
 
 exec --no-startup-id feh --bg-fill ~/Pictures/wall4.webp
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/dotfiles/config/polybar/launch.sh
